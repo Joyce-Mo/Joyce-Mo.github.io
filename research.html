@@ -1,0 +1,34 @@
+---
+layout: page
+title: Research
+permalink: /research/
+intro: I work at the intersection of machine learning, biophysics, and engineering, from protein and RNA design at UC Berkeley & UCSF to spacecraft propulsion and tracking at Princeton Satellite Systems.
+---
+{%- assign me = site.author -%}
+{%- assign bold = "<strong>" | append: me | append: "</strong>" -%}
+{%- assign years = site.data.publications | group_by: "year" | sort: "name" | reverse -%}
+<div class="list">
+{% for y in years %}
+  <section class="year-group">
+    <h2 class="year">{{ y.name }}</h2>
+    <ol class="pubs">
+    {% for p in y.items %}
+      <li class="pub">
+        <div class="pub-main">
+          {% if p.url %}<a class="pub-title" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}<span class="pub-title">{{ p.title }}</span>{% endif %}
+          <p class="pub-authors">{{ p.authors | replace: me, bold }}</p>
+          <p class="pub-venue">{{ p.venue }}</p>
+          {% if p.pdf or p.code %}
+          <p class="pub-links">
+            {% if p.pdf %}<a href="{{ p.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+            {% if p.code %}<a href="{{ p.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+          </p>
+          {% endif %}
+        </div>
+        <span class="tag">{{ p.type }}</span>
+      </li>
+    {% endfor %}
+    </ol>
+  </section>
+{% endfor %}
+</div>

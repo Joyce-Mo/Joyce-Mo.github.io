@@ -1,0 +1,45 @@
+---
+layout: page
+title: Art
+permalink: /art/
+wide: true
+intro: I trained in classical Western fine art at the Academy of Art of Highland Park for over a decade and minored in Visual Arts at Princeton. Chinese calligraphy I learned from my father. Click any piece to see it larger.
+---
+<div class="filters" role="toolbar" aria-label="Filter by medium">
+  <button class="chip is-on" data-filter="all" aria-pressed="true">All</button>
+  {%- for c in site.data.art_categories %}
+  {%- assign n = site.data.art | where: "category", c.key | size -%}
+  {%- if n > 0 %}
+  <button class="chip" data-filter="{{ c.key }}" aria-pressed="false">{{ c.name }}</button>
+  {%- endif -%}
+  {%- endfor %}
+</div>
+
+<div class="gallery" data-gallery>
+{%- for c in site.data.art_categories -%}
+  {%- assign items = site.data.art | where: "category", c.key -%}
+  {%- for a in items %}
+  {%- assign slug = a.image | split: "." | first %}
+  <figure class="piece" id="{{ slug }}" data-cat="{{ a.category }}">
+    <button class="piece-btn" type="button"
+      data-full="{{ '/assets/art/' | append: a.image | relative_url }}"
+      data-title="{{ a.title | escape }}"
+      data-medium="{{ c.name | escape }}{% if a.year %} · {{ a.year }}{% endif %}"
+      data-desc="{{ a.description | escape }}">
+      <img src="{{ '/assets/art/thumbs/' | append: a.image | relative_url }}" alt="{{ a.title | escape }}" width="{{ a.width }}" height="{{ a.height }}" loading="lazy" decoding="async">
+    </button>
+    <figcaption><span>{{ a.title }}</span><span class="muted">{{ c.name }}</span></figcaption>
+  </figure>
+  {%- endfor -%}
+{%- endfor %}
+</div>
+
+<dialog class="lightbox" data-lightbox aria-label="Artwork viewer">
+  <button class="lb-close" type="button" data-close aria-label="Close">✕</button>
+  <button class="lb-nav lb-prev" type="button" data-prev aria-label="Previous">←</button>
+  <figure>
+    <img alt="">
+    <figcaption><strong></strong><span class="muted"></span><p></p></figcaption>
+  </figure>
+  <button class="lb-nav lb-next" type="button" data-next aria-label="Next">→</button>
+</dialog>

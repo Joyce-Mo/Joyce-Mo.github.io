@@ -1,0 +1,58 @@
+---
+layout: default
+---
+{%- assign art = site.data.art | where: "featured", true -%}
+{%- assign pubs = site.data.publications | where: "featured", true -%}
+{%- assign pub0 = pubs[0] -%}{%- assign pub1 = pubs[1] -%}{%- assign pub2 = pubs[2] -%}
+{%- assign art0 = art[0] -%}{%- assign art1 = art[1] -%}{%- assign art2 = art[2] -%}{%- assign art3 = art[3] -%}{%- assign art4 = art[4] -%}{%- assign art5 = art[5] -%}
+{%- assign post0 = site.posts[0] -%}
+<div class="grid">
+
+  <section class="hero reveal">
+    <h1>
+      Hey there, I’m <span class="ink">Joyce</span> 👋
+      I’m a bioengineering PhD student at
+      <a class="u u-sky ext-u" href="https://bioegrad.berkeley.edu/" target="_blank" rel="noopener">UC Berkeley &amp; UCSF</a>,
+      where I use machine learning and molecular simulation to understand and
+      <a class="u u-orange" href="{{ '/research/' | relative_url }}">design biomolecules</a>.
+      <br><br>
+      Before that, I studied chemical &amp; biological engineering at Princeton and worked on
+      <a class="u u-purple ext-u" href="https://psatellite.com/" target="_blank" rel="noopener">space propulsion</a>
+      and target tracking at Princeton Satellite Systems.
+      <br><br>
+      I’ve been making <a class="u u-rose" href="{{ '/art/' | relative_url }}">art</a> since I was a kid:
+      oil, watercolor, charcoal, sculpture, and
+      <a class="u u-lime" href="{{ '/art/' | relative_url }}#calligraphy">Chinese calligraphy</a>.
+      I also <a class="u u-teal" href="{{ '/writing/' | relative_url }}">write</a> now and then.
+    </h1>
+  </section>
+
+  {% include tile-pub.html item=pub0 size="t-wide" i=1 %}
+  {% include tile-art.html item=art0 i=2 %}
+  {% include tile-art.html item=art1 i=3 %}
+  {% include tile-post.html item=post0 i=4 %}
+  {% include tile-art.html item=art2 i=5 %}
+
+  <div class="tile tile-text t-sq reveal" style="--i:6">
+    <div class="tile-head"><span><a href="{{ '/about/' | relative_url }}">About</a> · Now</span></div>
+    <dl class="now">
+      <div><dt>Studying</dt><dd>PhD, Bioengineering · UC Berkeley &amp; UCSF</dd></div>
+      <div><dt>Previously</dt><dd>Engineer · Princeton Satellite Systems</dd></div>
+      <div><dt>Studied</dt><dd>B.S.E. Chemical &amp; Biological Engineering · Princeton ’24</dd></div>
+      <div><dt>Minors</dt><dd>Visual Arts · Sustainable Energy</dd></div>
+    </dl>
+  </div>
+
+  {% include tile-art.html item=art3 i=7 %}
+  {% include tile-pub.html item=pub1 i=8 %}
+  {% include tile-art.html item=art4 i=9 %}
+  {% include tile-art.html item=art5 i=10 %}
+  {% include tile-pub.html item=pub2 size="t-wide" i=11 %}
+  {% for a in art offset:6 %}
+    {% include tile-art.html item=a i=12 %}
+  {% endfor %}
+  {% for p in site.posts offset:1 limit:2 %}
+    {% include tile-post.html item=p i=12 %}
+  {% endfor %}
+
+</div>

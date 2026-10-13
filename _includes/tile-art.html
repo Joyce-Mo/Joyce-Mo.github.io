@@ -1,0 +1,13 @@
+{%- assign a = include.item -%}
+{%- if a -%}
+{%- assign slug = a.image | split: "." | first -%}
+{%- assign ratio = a.width | times: 100 | divided_by: a.height -%}
+{%- assign cat = site.data.art_categories | where: "key", a.category | first -%}
+<div class="tile tile-art{% if ratio > 135 %} t-wide{% else %} t-sq{% endif %} reveal" style="--i:{{ include.i | default: 0 }}">
+  <img src="{{ '/assets/art/thumbs/' | append: a.image | relative_url }}" alt="{{ a.title }}{% if cat %} ({{ cat.name }}){% endif %}" {% if include.i > 6 %}loading="lazy" {% endif %}decoding="async">
+  <div class="tile-head">
+    <span><a href="{{ '/art/' | relative_url }}">Art</a> · {{ a.title }}</span>
+    <a class="tile-btn" href="{{ '/art/' | relative_url }}#{{ slug }}" aria-label="View {{ a.title }}">{% include arrow.html %}</a>
+  </div>
+</div>
+{%- endif -%}

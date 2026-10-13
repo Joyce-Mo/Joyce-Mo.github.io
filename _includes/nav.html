@@ -1,0 +1,19 @@
+{%- assign url = page.url | replace: "index.html", "" -%}
+<nav class="nav" aria-label="Main">
+  <div class="nav-pill" data-nav>
+    <span class="nav-hl" aria-hidden="true"></span>
+    {%- assign links = "Joyce|/,Research|/research/,Writing|/writing/,Art|/art/,About|/about/" | split: "," -%}
+    {%- for l in links -%}
+      {%- assign p = l | split: "|" -%}
+      {%- assign on = false -%}
+      {%- if p[1] == "/" -%}{%- if url == "/" -%}{%- assign on = true -%}{%- endif -%}
+      {%- elsif url contains p[1] -%}{%- assign on = true -%}{%- endif %}
+    <a href="{{ p[1] | relative_url }}" class="nav-link{% if on %} is-active{% endif %}"{% if on %} aria-current="page"{% endif %}>{{ p[0] }}</a>
+    {%- endfor %}
+  </div>
+  <div class="nav-ext">
+    <a class="ext" href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>
+    <a class="ext" href="https://www.linkedin.com/in/{{ site.social.linkedin }}/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="ext" href="mailto:{{ site.social.email }}">Email</a>
+  </div>
+</nav>

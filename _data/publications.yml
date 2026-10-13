@@ -1,0 +1,36 @@
+# Publications on /research/, newest first. Your name is bolded automatically.
+#   type:  shown as a small tag (Paper, Book, Preprint, ...)
+#   url:   main link (DOI or publisher page); optional pdf / code links
+#   featured: true -> also shown as a tile on the home page
+
+- title: "Starfire: Fusion Power for Human Mars Missions"
+  authors: Layla M. Aboud, Michael Paluszek, Joyce Mo, Sarah Fry
+  venue: AIAA ASCEND
+  year: 2026
+  type: Paper
+  url: https://doi.org/10.2514/6.2026-3128
+  featured: true
+
+- title: "Advanced Space Propulsion"
+  authors: Michael Paluszek, Christopher A. Galea, Parisa Mirdamadi, Joyce Mo, Layla Mohsen, Stephanie J. Thomas
+  venue: Elsevier
+  year: 2026
+  type: Book
+  url: https://www.sciencedirect.com/book/9780443338090/advanced-space-propulsion
+  featured: true
+
+- title: "Multi-Sensor Target Tracking using Track-Oriented Multiple Hypothesis Testing and Deep Learning"
+  authors: Joyce Mo, Michael Paluszek, Angela Kwon
+  venue: Advanced Maui Optical and Space Surveillance Technologies Conference (AMOS)
+  year: 2025
+  type: Paper
+  url: https://doi.org/10.64861/elet1690
+  featured: true
+
+# Uncomment when it is public (it is currently a double-blind submission):
+# - title: "Scaling works in biology if you use latents"
+#   authors: Joyce Mo, Daniel A. Fletcher, Brian Cheung
+#   venue: Under review
+#   year: 2026
+#   type: Preprint
+#   url:

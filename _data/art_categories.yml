@@ -1,0 +1,15 @@
+# Filters on the Art page, in display order. `key` is what you put in art.yml's `category`.
+- key: painting
+  name: Oil, Acrylic & Digital
+- key: watercolor-ink
+  name: Watercolor, Ink & Marker
+- key: botanical
+  name: Botanical Illustration
+- key: drawing
+  name: Graphite & Charcoal
+- key: sculpture
+  name: Sculpture
+- key: calligraphy
+  name: Chinese Calligraphy
+- key: graphic-design
+  name: Graphic Design

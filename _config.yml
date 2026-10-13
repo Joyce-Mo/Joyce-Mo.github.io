@@ -1,0 +1,39 @@
+title: Joyce Mo
+description: Bioengineer, researcher, and artist. Research, writing, and artwork by Joyce Mo.
+author: Joyce Mo
+url: https://joyce-mo.github.io
+baseurl: ""
+lang: en
+
+# Links shown in the nav bar (right side) and on the About page
+social:
+  github: Joyce-Mo
+  linkedin: joyce-mo
+  email: joycemo413@gmail.com
+  instagram: chummy.creations
+
+permalink: /writing/:year/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: writing/feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - vendor/
+  - .bundle/
