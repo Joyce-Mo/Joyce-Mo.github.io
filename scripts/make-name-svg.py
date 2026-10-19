@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Draw "Joyce Mo" in a font as an SVG -> _includes/name.svg (the big name on the home page)
 
-Usage:  python3 scripts/make-name-svg.py path/to/charlotte.otf
+Usage:  python3 scripts/make-name-svg.py path/to/BirthstoneBounce-Medium.ttf
 Needs:  pip install fonttools uharfbuzz
 
-The letters become plain vector shapes, so the font file itself is never put
-on the website (Charlotte's free personal-use license doesn't allow webfonts).
+Font: Birthstone Bounce (SIL Open Font License, free for any use, including commercial):
+https://fonts.google.com/specimen/Birthstone+Bounce
+The letters become plain vector shapes, so no font file is loaded by the site.
 A few stars are sprinkled around the name; they twinkle via .name-art in main.css.
 """
 import sys

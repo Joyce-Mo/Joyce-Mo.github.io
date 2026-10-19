@@ -118,9 +118,8 @@ Add an entry to `_data/publications.yml` (your name is bolded automatically):
 ## Edit the intro and other text
 
 - Home-page intro and featured book: `index.html`
-- The big "Joyce Mo" is a drawing in `_includes/name.svg`, made from the Charlotte font (Uloel Design,
-  free for personal use) by `scripts/make-name-svg.py`; instructions are at the top of that file.
-  The font file itself isn't on the site, because its license doesn't allow webfonts.
+- The big "Joyce Mo" is a drawing in `_includes/name.svg`, made from the free Birthstone Bounce font
+  (Open Font License, OK for any use) by `scripts/make-name-svg.py`; instructions are at the top of that file.
 - About page: `about.md`
 - Page intros: the `intro:` line at the top of `research.html`, `writing.html`, `art.html`
 - Email / GitHub / LinkedIn / Instagram: `_config.yml`

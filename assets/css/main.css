@@ -123,7 +123,7 @@ a { color: inherit; text-decoration: none; }
   display: grid; gap: 72px;
 }
 @media (max-width: 639px) { .home { padding-top: 24px; gap: 48px; } }
-/* big name: an SVG drawn in the Charlotte font by scripts/make-name-svg.py */
+/* big name: an SVG drawn in the Birthstone Bounce font by scripts/make-name-svg.py */
 .name { margin: 0; color: var(--accent); }
 .name-art { display: block; width: min(100%, 720px); height: auto; overflow: visible; }
 .name-art .star { transform-box: fill-box; transform-origin: center; animation: twinkle 3.2s ease-in-out infinite; }
@@ -380,22 +380,30 @@ a.pub-title:hover { text-decoration-color: currentColor; }
 }
 
 /* ---------- Wooper the cat (sprite from my VS Code extension) ------------- */
-.wooper-track { position: relative; height: 48px; margin-top: 56px; border-bottom: 1px solid var(--line); overflow: hidden; }
-.wooper { position: absolute; bottom: 0; left: 0; width: 72px; height: 48px; animation: wooper-roam 44s linear infinite; }
-.wooper-sprite {
-  width: 100%; height: 100%;
-  background: url("../img/wooper-walk.svg") 0 0 / 144px 48px no-repeat;
+/* sits next to the GitHub link, top right; blinks and flicks his tail.
+   Drawn at exactly 2x (22px sprite -> 44px) so the pixels stay square. */
+.nav-ext { align-items: center; }
+.nav-ext .gh { display: inline-flex; align-items: center; gap: 6px; }
+.wooper {
+  flex: none;
+  width: 44px; height: 44px; margin: -10px 0;
+  background: url("../img/wooper-sit.svg") 0 0 / 300% 100% no-repeat;
   image-rendering: pixelated;
-  animation: wooper-step .3s steps(2) infinite, wooper-face 44s step-end infinite;
+  animation: wooper-idle 2.24s step-end infinite;
 }
-@keyframes wooper-roam { 0%, 100% { left: calc(100% - 72px); } 50% { left: 0; } }
-@keyframes wooper-step { to { background-position: -144px 0; } }
-@keyframes wooper-face { 0% { transform: none; } 50% { transform: scaleX(-1); } }
+/* frames 0,0,0,0,0,1,1,0,0,0,0,0,2,0 like the extension: 1 = tail flick, 2 = blink */
+@keyframes wooper-idle {
+  0% { background-position-x: 0%; }
+  35.71% { background-position-x: 50%; }
+  50% { background-position-x: 0%; }
+  85.71% { background-position-x: 100%; }
+  92.86% { background-position-x: 0%; }
+}
 
 /* ---------- Footer -------------------------------------------------------- */
 .footer {
   display: flex; flex-direction: column; align-items: center; gap: 8px;
-  padding: 32px 0 40px;
+  padding: 64px 0 40px;
   font-size: 14px; color: var(--muted);
 }
 .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; margin: 4px 0 0; }
