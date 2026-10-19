@@ -9,6 +9,7 @@ lang: en
 # Links shown in the nav bar (right side) and on the About page
 social:
   github: Joyce-Mo
+  twitter: Joyce_Mo_
   linkedin: joyce-mo
   email: joycemo413@gmail.com
   instagram: chummy.creations
@@ -30,6 +31,9 @@ feed:
 defaults:
   - scope: { path: "", type: posts }
     values: { layout: post }
+  # Posts I wrote elsewhere: each file in _posts/pss/ just links out (see README)
+  - scope: { path: "_posts/pss", type: posts }
+    values: { source: PSS, source_name: Princeton Satellite Systems blog, sitemap: false }
 
 exclude:
   - README.md

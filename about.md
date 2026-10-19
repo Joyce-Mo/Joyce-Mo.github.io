@@ -11,7 +11,7 @@ I was born in New Brunswick, New Jersey, and spent my early childhood in Guangxi
 
 At Princeton I studied chemical and biological engineering, with minors in Sustainable Energy and Visual Arts. I did research on transcription-factor biosensors in the [Avalos Lab](https://jlagroup.scholar.princeton.edu/), served as President of the Princeton University Art Museum Student Advisory Board, and spent a lot of time in the ceramics studio. After graduating, I worked as an engineer at [Princeton Satellite Systems](https://psatellite.com/) on space propulsion and multi-sensor target tracking.
 
-Now I’m a PhD student in the UC Berkeley–UCSF Graduate Program in Bioengineering, where I use machine learning and molecular simulation to study and design proteins and RNA.
+Now I’m a PhD student in the UC Berkeley–UCSF Graduate Program in Bioengineering, where I use machine learning and molecular simulation to study and design proteins and RNA. I’m also a venture fellow at [Riceberg Ventures](https://www.riceberg.vc/), an early-stage deep-tech fund.
 
 I’m always trying to combine art, science, and technology: to make observations, ask questions, and make things that invite people to think about their own identities and interconnectedness. Outside of work I like hiking, ice cream, 3D printing, and the pottery wheel.
 
@@ -24,6 +24,7 @@ I’m always trying to combine art, science, and technology: to make observation
 ## Elsewhere
 
 - Email: [{{ site.social.email }}](mailto:{{ site.social.email }})
+- Twitter: [@{{ site.social.twitter }}](https://x.com/{{ site.social.twitter }})
 - GitHub: [@{{ site.social.github }}](https://github.com/{{ site.social.github }})
 - LinkedIn: [in/{{ site.social.linkedin }}](https://www.linkedin.com/in/{{ site.social.linkedin }}/)
 - Instagram (art): [@{{ site.social.instagram }}](https://www.instagram.com/{{ site.social.instagram }}/)

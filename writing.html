@@ -2,7 +2,7 @@
 layout: page
 title: Writing
 permalink: /writing/
-intro: Notes, essays, and things I’m thinking about, on science, art, and everything in between.
+intro: Notes, essays, and things I’m thinking about, on science, art, and everything in between. Posts tagged PSS I wrote for Princeton Satellite Systems; Podcast marks shows I’ve been on.
 ---
 {%- assign years = site.posts | group_by_exp: "p", "p.date | date: '%Y'" -%}
 <div class="list">
@@ -11,10 +11,7 @@ intro: Notes, essays, and things I’m thinking about, on science, art, and ever
     <h2 class="year">{{ y.name }}</h2>
     <ul class="rows">
     {% for p in y.items %}
-      <li><a class="row" href="{{ p.url | relative_url }}">
-        <span class="row-title">{{ p.title }}</span>
-        <time class="row-date" datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%b %-d" }}</time>
-      </a></li>
+      {% include post-row.html post=p %}
     {% endfor %}
     </ul>
   </section>

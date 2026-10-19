@@ -10,7 +10,7 @@
 #   description:  optional, shown in the lightbox
 #   year:         optional
 #   width/height: thumbnail size in pixels (prevents layout jumping while loading)
-#   featured:     optional, true = also show as a tile on the home page
+#   featured:     optional, true = one of the 4 pieces shown on the home page
 
 - title: "Snow Wolf"
   image: snow-wolf.jpg
@@ -48,7 +48,6 @@
   category: painting
   width: 800
   height: 796
-  featured: true
 
 - title: "Pink Hair"
   image: pink-hair.jpg
@@ -73,14 +72,12 @@
   category: painting
   width: 800
   height: 613
-  featured: true
 
 - title: "Calico Cat"
   image: calico-cat.jpg
   category: painting
   width: 626
   height: 800
-  featured: true
 
 - title: "Fish and Fetus"
   image: fish-and-fetus.jpg
@@ -153,7 +150,6 @@
   description: "Marker."
   width: 770
   height: 800
-  featured: true
 
 - title: "Fire"
   image: fire.jpg
@@ -174,7 +170,6 @@
   description: "Created with controlled watercolor spray and selective masking to preserve whites and lights."
   width: 800
   height: 560
-  featured: true
 
 - title: "Leaf Window Plant"
   image: leaf-window-plant.jpg
@@ -219,7 +214,6 @@
   category: botanical
   width: 589
   height: 800
-  featured: true
 
 - title: "Bitter Orange"
   image: bitter-orange.jpg
@@ -288,7 +282,6 @@
   description: "Sea turtle, a mix of classical shading and scumbling. Charcoal."
   width: 800
   height: 578
-  featured: true
 
 - title: "Boat Cow"
   image: boat-cow.jpg
@@ -296,7 +289,6 @@
   description: "Standing mobile sculpture of a fishing cow in a wave, made out of paper, wire, and fishing line."
   width: 800
   height: 600
-  featured: true
 
 - title: "Swimming Tiger"
   image: swimming-tiger.jpg
@@ -315,7 +307,6 @@
   category: sculpture
   width: 800
   height: 534
-  featured: true
 
 - title: "6 Sided Neuron (alternate view)"
   image: 6-sided-neuron-alternate-view.jpg
@@ -335,7 +326,6 @@
   description: "Traditional brush, ink, and handmade stamp."
   width: 800
   height: 798
-  featured: true
 
 - title: "Hanging Scroll"
   image: hanging-scroll.jpg

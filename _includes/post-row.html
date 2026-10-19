@@ -1,0 +1,6 @@
+{%- assign p = include.post -%}
+{%- assign fmt = include.fmt | default: "%b %-d" -%}
+<li><a class="row" href="{{ p.external_url | default: p.url | relative_url }}"{% if p.external_url %} target="_blank" rel="noopener"{% endif %}>
+  <span class="row-title">{{ p.title }}{% if p.source %} <span class="src" title="{{ p.source_name | default: p.source }}">{{ p.source }}</span>{% endif %}</span>
+  <time class="row-date" datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: fmt }}</time>
+</a></li>

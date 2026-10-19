@@ -1,7 +1,6 @@
 # Publications on /research/, newest first. Your name is bolded automatically.
 #   type:  shown as a small tag (Paper, Book, Preprint, ...)
 #   url:   main link (DOI or publisher page); optional pdf / code links
-#   featured: true -> also shown as a tile on the home page
 
 - title: "Starfire: Fusion Power for Human Mars Missions"
   authors: Layla M. Aboud, Michael Paluszek, Joyce Mo, Sarah Fry
@@ -19,6 +18,20 @@
   url: https://www.sciencedirect.com/book/9780443338090/advanced-space-propulsion
   featured: true
 
+- title: "Wide-Bandgap Semiconductor Amplifiers for Fusion Plasma Heating and Control"
+  authors: Michael Paluszek, Christopher Galea, Joyce Mo, Sangeeta Punjabi-Vinoth, Minjie Chen, Tanuj Sen, et al.
+  venue: Fusion Science and Technology 82(7), 1364–1382
+  year: 2025
+  type: Paper
+  url: https://doi.org/10.1080/15361055.2025.2540212
+
+- title: "Enhancing Reinforcement Learning for Population Setpoint Tracking in Co-cultures"
+  authors: Sebastián Espinel-Ríos, Joyce Mo, Dongda Zhang, Ehecatl Antonio del Rio-Chanona, José L. Avalos
+  venue: IFAC-PapersOnLine 59(6), 61–66 (DYCOPS 2025)
+  year: 2025
+  type: Paper
+  url: https://doi.org/10.1016/j.ifacol.2025.07.122
+
 - title: "Multi-Sensor Target Tracking using Track-Oriented Multiple Hypothesis Testing and Deep Learning"
   authors: Joyce Mo, Michael Paluszek, Angela Kwon
   venue: Advanced Maui Optical and Space Surveillance Technologies Conference (AMOS)
@@ -26,6 +39,13 @@
   type: Paper
   url: https://doi.org/10.64861/elet1690
   featured: true
+
+- title: "A Health Inequality Analysis of Childhood Asthma Prevalence in Urban Australia"
+  authors: Ewan Cameron, Joyce Mo, Charles Yu
+  venue: Journal of Allergy and Clinical Immunology 154(2), 285–296
+  year: 2024
+  type: Paper
+  url: https://doi.org/10.1016/j.jaci.2024.01.023
 
 # Uncomment when it is public (it is currently a double-blind submission):
 # - title: "Scaling works in biology if you use latents"

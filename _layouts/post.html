@@ -12,10 +12,11 @@ layout: default
     </p>
   </header>
   <div class="prose reveal" style="--i:1">
+    {% if page.external_url %}<p>This post lives on the {{ page.source_name | default: page.source }} blog: <a href="{{ page.external_url }}">read it there</a>.</p>{% endif %}
     {{ content }}
   </div>
   <nav class="post-nav">
-    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><span>Older</span>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
-    {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}"><span>Newer</span>{{ page.next.title }}</a>{% endif %}
+    {% if page.previous %}<a href="{{ page.previous.external_url | default: page.previous.url | relative_url }}"><span>Older</span>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+    {% if page.next %}<a class="next" href="{{ page.next.external_url | default: page.next.url | relative_url }}"><span>Newer</span>{{ page.next.title }}</a>{% endif %}
   </nav>
 </article>
