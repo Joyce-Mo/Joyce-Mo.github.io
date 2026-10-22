@@ -11,7 +11,7 @@ social:
   github: Joyce-Mo
   twitter: Joyce_Mo_
   linkedin: joyce-mo
-  email: joycemo413@gmail.com
+  # email: joycemo413@gmail.com
   instagram: chummy.creations
 
 permalink: /writing/:year/:title/
